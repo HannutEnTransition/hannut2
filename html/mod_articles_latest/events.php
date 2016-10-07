@@ -40,30 +40,40 @@ defined('_JEXEC') or die;
 	?>	
 		<?php
 				if ($nbe == 0){
-				echo "Le calendrier est vide.";
+					echo "Le calendrier est vide.";
 				}
 		
 		?>
 		
 		<?php foreach ($events as $item) :  ?>
-		<div style="border-style: solid;border-width: 1px;margin: 5px;">
-		<div class="row-fluid" style="margin: 15px;">
-			<div class="col-sm9">
+		<div style="border-style: solid;border-width: 1px;margin: 5px; border-color:#e3e3e3; ">
+		<div class="row-fluid" style="margin: 15px 15px 0 ;">
+			<div class="col-sm-10" style="margin: 0 0 15px 0;">
+				<h4>
 				<a href="<?php echo $item->link; ?>" itemprop="url" style="color:#05676e;" >
-						<b><?php echo $item->title; ?></b>
+<!--						<b>--><?php //echo $item->title; ?><!--</b>-->
+						<?php echo $item->title; ?>
 				</a>
+				</h4>
 				 <?php $attributes = json_decode($item->attribs); 
 					list($annee, $mois, $jour) = explode ("-",$attributes->event_date);
 					$timestamp = mktime(0,0,0, date($mois), date($jour), date($annee));
 					$njour = date("N",$timestamp);
 				 ?>
-				 <br>
+				 <h5>
 				  <?php echo $attributes->event_place ?>
-				 <br>
-				  Le <?php echo $attributes->event_date ?>, 
+				 </h5>
+				<small>
+					<?php
+					$date = new DateTime($attributes->event_date);
+					?>
+<!--					Le <strong>--><?php //echo $date->format('d-m-Y') ?><!--</strong>,-->
+<!--				  Le --><?php //echo $attributes->event_date ?><!--,-->
 				 <span> <?php echo $attributes->event_information ?></span>
+				</small>
+
 			</div>
-			<div class="col-sm-2">
+			<div class="col-sm-2 col-xs-12 clearfix ">
 			 <div class="blockvert text-center">
 			     <a href="<?php echo $item->link; ?>" itemprop="url" style="color:white" >
 			        <?php echo $jour ?>  
@@ -74,12 +84,13 @@ defined('_JEXEC') or die;
 				</a>
 			 </div>
 			</div>
+			<div class="clear clearfix"></div>
 			<br>
 		</div>
 		<?php if (isset ($attributes->event_image)): ?>
 		  <?php if (trim($attributes->event_image) != ''): ?>
 			<div class="row-fluid" style="margin: 15px; ">
-			 <div class="span11">
+			 <div class="col-md-11 col-xs-12">
 				<img src="<?php echo $attributes->event_image; ?>"  alt=""/>
 			 </div>
 			</div>

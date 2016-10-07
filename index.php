@@ -144,6 +144,7 @@ if ($this->countModules('position-9') && $this->countModules('position-10'))
 		<jdoc:include type="modules" name="position-2" />
 		
 		<div class="row">
+
 			<?php if ($this->countModules('position-9')) : ?>
 				<div class="<?php echo $span2; ?>">
 					<jdoc:include type="modules" name="position-9" style="xhtml" />
@@ -173,3 +174,4 @@ if ($this->countModules('position-9') && $this->countModules('position-10'))
 </div>
 </body>
 </html>
+
