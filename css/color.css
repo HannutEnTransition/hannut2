@@ -119,3 +119,16 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
     padding: 0px;
 }
 .blockvert a,.blockvert a:hover {color:#FFF;}
+
+.clear {clear:both;height:0;}
+.blog .blockvert h1 {margin-top:0;}
+.blog .blockvert dd {margin-bottom:15px;}
+.dropdown-menu>.active>a {color:#fff;background: #05676e;}
+.navbar-inverse .nav-child > li.active > a {color:#FFF;}
+.page-header {border:0;margin:0;}
+.blog .item {border-bottom:1px solid #eee;padding:20px 0;}
+.input-group-addon button {padding:0;margin:0;background: none;border:0;}
+.searchintro {margin: 20px 0;font-size:1.2em;}
+.ordering-box {margin:10px 0;}
+.btn-primary{background: #05676e;border-color: #076970;}
+.btn-primary:hover{background: #02646b;border-color: #006269;}

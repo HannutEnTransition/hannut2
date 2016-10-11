@@ -52,9 +52,10 @@ if ($this->countModules('position-9') && $this->countModules('position-10'))
 	<!-- More bootstrap files -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
+<!--	<link rel="stylesheet" href="--><?php //echo $this->baseurl . '/templates/' . $this->template . '/css/bootstrap.min.css' ?><!--">-->
+
 	<!-- Customs features -->
-    <link rel="shortcut icon" href="http://www.hannutentransition.be/templates/hannut2/icon/favicon.ico"/>
+	<link rel="shortcut icon" href="http://www.hannutentransition.be/templates/hannut2/icon/favicon.ico"/>
 	<link rel="stylesheet" href="<?php echo $this->baseurl . '/templates/' . $this->template . '/css/color.css' ?>">
 
 </head>
